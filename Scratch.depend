@@ -1,0 +1,128 @@
+# depslib dependency file v1.0
+1448828659 source:c:\users\sam\documents\scratch\main.cpp
+	<iostream>
+	"gameengine.h"
+	"teststate.h"
+	"scriptengine.h"
+
+1436025894 c:\users\sam\documents\scratch\gameobject.h
+	<SFML/Graphics.hpp>
+	<SFML/Window.hpp>
+	<SFML/System.hpp>
+
+1448685180 source:c:\users\sam\documents\scratch\gameengine.cpp
+	"gameengine.h"
+	"gamestate.h"
+	<iostream>
+
+1448848045 c:\users\sam\documents\scratch\gameengine.h
+	<SFML/Graphics.hpp>
+	<SFML/Window.hpp>
+	<SFML/System.hpp>
+	<vector>
+	"assetmanager.h"
+	"entitymanager.h"
+
+1448661070 c:\users\sam\documents\scratch\gamestate.h
+	"gameengine.h"
+
+1448917413 c:\users\sam\documents\scratch\teststate.h
+	"gamestate.h"
+	"movementsystem.h"
+
+1448828924 source:c:\users\sam\documents\scratch\teststate.cpp
+	"teststate.h"
+
+1448675826 c:\users\sam\documents\scratch\assetmanager.h
+	<SFML/Graphics.hpp>
+	<SFML/Window.hpp>
+	<SFML/System.hpp>
+	<map>
+	<iostream>
+
+1448675894 source:c:\users\sam\documents\scratch\assetmanager.cpp
+	"assetmanager.h"
+
+1448466419 c:\users\sam\documents\scratch\worldeditstate.h
+	"gamestate.h"
+
+1436030992 source:c:\users\sam\documents\scratch\worldeditstate.cpp
+	"worldeditstate.h"
+
+1436030702 c:\users\sam\documents\scratch\tile.h
+	<SFML/Graphics.hpp>
+	<SFML/Window.hpp>
+	<SFML/System.hpp>
+	"gameobject.h"
+
+1448851251 c:\users\sam\documents\scratch\entitymanager.h
+	<SFML/Graphics.hpp>
+	<SFML/Window.hpp>
+	<SFML/System.hpp>
+	<vector>
+	<iostream>
+	"component.h"
+	"componenttypes.h"
+	"positioncomponent.h"
+	"velocitycomponent.h"
+
+1448846767 c:\users\sam\documents\scratch\component.h
+	"componenttypes.h"
+
+1448502323 c:\users\sam\documents\scratch\positioncomponent.h
+	<SFML/Graphics.hpp>
+	<SFML/Window.hpp>
+	<SFML/System.hpp>
+	"component.h"
+
+1448502622 c:\users\sam\documents\scratch\velocitycomponent.h
+	<SFML/Graphics.hpp>
+	<SFML/Window.hpp>
+	<SFML/System.hpp>
+	"component.h"
+
+1448648942 c:\users\sam\documents\scratch\componenttypes.h
+
+1448853561 source:c:\users\sam\documents\scratch\movementsystem.cpp
+	"movementsystem.h"
+	<iostream>
+
+1448917398 c:\users\sam\documents\scratch\movementsystem.h
+	<SFML/Graphics.hpp>
+	<SFML/Window.hpp>
+	<SFML/System.hpp>
+	"system.h"
+	"componenttypes.h"
+	"positioncomponent.h"
+	"velocitycomponent.h"
+
+1448917291 c:\users\sam\documents\scratch\system.h
+	"entitymanager.h"
+	<typeinfo>
+	<typeindex>
+
+1448850438 source:c:\users\sam\documents\scratch\entitymanager.cpp
+	<iostream>
+	"entitymanager.h"
+
+1448639258 c:\users\sam\documents\scratch\cameracomponent.h
+	<SFML/Graphics.hpp>
+	<SFML/Window.hpp>
+	<SFML/System.hpp>
+	"component.h"
+
+1448685373 source:c:\users\sam\documents\scratch\scriptengine.cpp
+	"scriptengine.h"
+
+1448685381 c:\users\sam\documents\scratch\scriptengine.h
+	<SFML/Graphics.hpp>
+	<SFML/Window.hpp>
+	<SFML/System.hpp>
+	<iostream>
+	<map>
+	<vector>
+	<LuaBridge.h>
+	<lua.h>
+	<lauxlib.h>
+	<lualib.h>
+
