@@ -8,7 +8,7 @@ class Component
 {
 protected:
 
-    unsigned int entityID;
+    int entityID;
     unsigned int flag;
 
 public:

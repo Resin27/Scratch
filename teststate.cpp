@@ -21,9 +21,17 @@ void TestState::init(GameEngine *game)
     std::cout << "New EntityID: " << entityManager->addEntity() << std::endl;
     entityManager->entityMask[0] += 1<<COMPONENT_POSITION|1<<COMPONENT_VELOCITY;
     entityManager->positionRegister[0].setID(0);
+    entityManager->positionRegister[0].position = sf::Vector2i(20,30);
     entityManager->velocityRegister[0].setID(0);
+    entityManager->velocityRegister[0].velocity = sf::Vector2f(5.4,12.9);
 
-    mover.registerEntities();
+
+    //mover.registerEntities();
+    std::cout<<"EntityMask:0: " << entityManager->entityMask[0] << std::endl;
+    std::cout<<"SystemMask:   " << mover.getMask() << std::endl;
+    std::cout<<"MasksCheckOut:" << mover.checkMask(0) << std::endl;
+    std::cout<<"EntityRegged: " << mover.registerEntity(0) <<std::endl;
+
 
 }
 
@@ -49,7 +57,8 @@ void TestState::handleEvents()
 
 void TestState::update(float dt)
 {
-    //mover.update(dt);
+    mover.update(dt);
+    //std::cout << "MANAGE: Entity[" << 0 << "]: " << entityManager->positionRegister[0].position.x << "," << entityManager->positionRegister[0].position.y <<std::endl;
 }
 
 void TestState::draw()

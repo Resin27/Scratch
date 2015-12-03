@@ -13,7 +13,7 @@
 #include "velocitycomponent.h"
 
 static const unsigned int MAX_ENTITY_COUNT = 65535;
-
+/*
 template <class T>
 class ComponentTable
 {
@@ -23,11 +23,11 @@ protected:
     typename std::vector<T>::iterator first = componentRegister.begin();
     typename std::vector<T>::iterator last = componentRegister.end();
 public:
-    T& getComponent(unsigned int entityID){if(index[entityID] >= 0) return componentRegister[index[entityID]]; else return nullptr;}
-    void addComponent(unsigned int entityID, T component){index[entityID] = componentRegister.size(); componentRegister.push_back(component);}
-    void removeComponent(unsigned int entityID){if(index[entityID] >= 0) {componentRegister.erase(first+index[entityID]);}}
+    T& getComponent(int entityID){if(index[entityID] != 1) return componentRegister[index[entityID]]; else return nullptr;}
+    void addComponent(int entityID, T component){index[entityID] = componentRegister.size(); componentRegister.push_back(component);}
+    void removeComponent(int entityID){if(index[entityID] != 1) {componentRegister.erase(first+index[entityID]);}}
 };
-
+*/
 ///Class
 class EntityManager
 {
@@ -37,9 +37,10 @@ public:
 
     unsigned int entityCount;
     //int entityMask[MAX_ENTITY_COUNT];
+
+    std::vector<int> entityMask;
     std::vector<unsigned int> aliveEntities;
     std::vector<unsigned int> deadEntities;
-    std::vector<int> entityMask;
     //bool worldChanged;
 
     //std::map<std::string, int> prototype;

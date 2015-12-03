@@ -15,7 +15,7 @@ unsigned int EntityManager::addEntity()
 {
     if(entityCount < MAX_ENTITY_COUNT)
     {
-        if(deadEntities.size())
+        if(deadEntities.size() > 0)
         {
             unsigned int newEntity = deadEntities.back();
             deadEntities.pop_back();

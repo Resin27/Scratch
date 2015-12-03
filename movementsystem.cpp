@@ -3,21 +3,26 @@
 
 void MovementSystem::update(float dt)
 {
-    for(unsigned int i = 0; i < entityCount; i++)
+    std::vector<PositionComponent>& positionRegister = eManager->positionRegister;
+    std::vector<VelocityComponent>& velocityRegister = eManager->velocityRegister;
+    for(auto &registeredEntity : registeredEntities)
     {
-        sf::Vector2f delta = velocityRegister[i]->velocity * dt;
-        delta = delta + positionRegister[i]->remainder;
+        PositionComponent& pos = positionRegister[registeredEntity];
+        VelocityComponent& vel = velocityRegister[registeredEntity];
+        sf::Vector2f delta = vel.velocity * dt;
+        delta = delta + pos.remainder;
 
-        positionRegister[i]->oldPosition = positionRegister[i]->position;
-        positionRegister[i]->oldRemainder = positionRegister[i]->remainder;
+        pos.oldPosition = pos.position;
+        pos.oldRemainder = pos.remainder;
 
-        positionRegister[i]->position = positionRegister[i]->position + sf::Vector2i(delta);
-        positionRegister[i]->remainder.x = (delta.x - sf::Vector2i(delta).x);
-        positionRegister[i]->remainder.y = (delta.y - sf::Vector2i(delta).y);
+        pos.position = pos.position + sf::Vector2i(delta);
+        pos.remainder.x = (delta.x - sf::Vector2i(delta).x);
+        pos.remainder.y = (delta.y - sf::Vector2i(delta).y);
+        //std::cout << "SYSTEM: Entity[" << registeredEntity << "]: " << positionRegister[registeredEntity].position.x << "," << positionRegister[registeredEntity].position.y <<std::endl;
     }
 }
 
-void MovementSystem::registerEntities()
+/*void MovementSystem::registerEntities()
 {
     positionRegister.clear();
     velocityRegister.clear();
@@ -34,7 +39,7 @@ void MovementSystem::registerEntities()
     }
 }
 
-bool MovementSystem::registerEntity(unsigned int entityID)
+bool MovementSystem::registerEntity(int entityID)
 {
     if(isRegistered(entityID))
     {
@@ -50,7 +55,7 @@ bool MovementSystem::registerEntity(unsigned int entityID)
     return false;
 }
 
-bool MovementSystem::deregisterEntity(unsigned int entityID)
+bool MovementSystem::deregisterEntity(int entityID)
 {
     for(unsigned int i = 0; i < entityCount; i++)
     {
@@ -65,7 +70,7 @@ bool MovementSystem::deregisterEntity(unsigned int entityID)
     return false;
 }
 
-bool MovementSystem::isRegistered(unsigned int entityID)
+bool MovementSystem::isRegistered(int entityID)
 {
     for(unsigned int i = 0; i < entityCount; i++)
     {
@@ -96,4 +101,4 @@ void MovementSystem::processApplicants()
             }
         }
     }
-}
+}*/

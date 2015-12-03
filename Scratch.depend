@@ -26,11 +26,11 @@
 1448661070 c:\users\sam\documents\scratch\gamestate.h
 	"gameengine.h"
 
-1448917413 c:\users\sam\documents\scratch\teststate.h
+1449109467 c:\users\sam\documents\scratch\teststate.h
 	"gamestate.h"
 	"movementsystem.h"
 
-1448828924 source:c:\users\sam\documents\scratch\teststate.cpp
+1449112532 source:c:\users\sam\documents\scratch\teststate.cpp
 	"teststate.h"
 
 1448675826 c:\users\sam\documents\scratch\assetmanager.h
@@ -55,7 +55,7 @@
 	<SFML/System.hpp>
 	"gameobject.h"
 
-1448851251 c:\users\sam\documents\scratch\entitymanager.h
+1449109251 c:\users\sam\documents\scratch\entitymanager.h
 	<SFML/Graphics.hpp>
 	<SFML/Window.hpp>
 	<SFML/System.hpp>
@@ -66,7 +66,7 @@
 	"positioncomponent.h"
 	"velocitycomponent.h"
 
-1448846767 c:\users\sam\documents\scratch\component.h
+1449109251 c:\users\sam\documents\scratch\component.h
 	"componenttypes.h"
 
 1448502323 c:\users\sam\documents\scratch\positioncomponent.h
@@ -83,11 +83,11 @@
 
 1448648942 c:\users\sam\documents\scratch\componenttypes.h
 
-1448853561 source:c:\users\sam\documents\scratch\movementsystem.cpp
+1449112506 source:c:\users\sam\documents\scratch\movementsystem.cpp
 	"movementsystem.h"
 	<iostream>
 
-1448917398 c:\users\sam\documents\scratch\movementsystem.h
+1449108603 c:\users\sam\documents\scratch\movementsystem.h
 	<SFML/Graphics.hpp>
 	<SFML/Window.hpp>
 	<SFML/System.hpp>
@@ -96,12 +96,10 @@
 	"positioncomponent.h"
 	"velocitycomponent.h"
 
-1448917291 c:\users\sam\documents\scratch\system.h
+1449111295 c:\users\sam\documents\scratch\system.h
 	"entitymanager.h"
-	<typeinfo>
-	<typeindex>
 
-1448850438 source:c:\users\sam\documents\scratch\entitymanager.cpp
+1448943421 source:c:\users\sam\documents\scratch\entitymanager.cpp
 	<iostream>
 	"entitymanager.h"
 
@@ -125,4 +123,8 @@
 	<lua.h>
 	<lauxlib.h>
 	<lualib.h>
+
+1449111300 source:c:\users\sam\documents\scratch\system.cpp
+	"system.h"
+	<iostream>
 

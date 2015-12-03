@@ -15,22 +15,9 @@ class MovementSystem : public System
 {
 protected:
 
-    std::vector<PositionComponent*> positionRegister;
-    std::vector<VelocityComponent*> velocityRegister;
-
-    const std::vector<std::type_index> types{typeid(PositionComponent), typeid(VelocityComponent)};
-
 public:
 
-    MovementSystem() : System(1<<COMPONENT_POSITION | 1<<COMPONENT_VELOCITY){setComponentRegisters(types);}
-
-    void registerEntities();
-    bool registerEntity(unsigned int entityID);
-    bool deregisterEntity(unsigned int entityID);
-
-    bool isRegistered(unsigned int entityID);
-
-    void processApplicants();
+    MovementSystem() : System(1<<COMPONENT_POSITION | 1<<COMPONENT_VELOCITY){}
 
     void update(float dt);
 };
